@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3258A4611EC43A620099BF2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3258A4601EC43A620099BF2D /* main.m */; };
+		3258A4641EC43A620099BF2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3258A4631EC43A620099BF2D /* AppDelegate.m */; };
+		3258A4671EC43A620099BF2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3258A4661EC43A620099BF2D /* ViewController.m */; };
+		3258A46A1EC43A620099BF2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3258A4681EC43A620099BF2D /* Main.storyboard */; };
+		3258A46D1EC43A620099BF2D /* SmartHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3258A46B1EC43A620099BF2D /* SmartHome.xcdatamodeld */; };
+		3258A46F1EC43A620099BF2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3258A46E1EC43A620099BF2D /* Assets.xcassets */; };
+		3258A4721EC43A620099BF2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3258A4701EC43A620099BF2D /* LaunchScreen.storyboard */; };
+		3258A47C1EC43A6B0099BF2D /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3258A47B1EC43A6B0099BF2D /* HomeKit.framework */; };
+		3258A4811EC54BFA0099BF2D /* mainBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3258A47E1EC54BFA0099BF2D /* mainBackground.png */; };
+		3258A4821EC54BFA0099BF2D /* mainBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3258A47F1EC54BFA0099BF2D /* mainBackground@2x.png */; };
+		3258A4831EC54BFA0099BF2D /* mainBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3258A4801EC54BFA0099BF2D /* mainBackground@3x.png */; };
+		3258A4891EC55AF60099BF2D /* AccessoriesDetailControllVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3258A4881EC55AF60099BF2D /* AccessoriesDetailControllVC.m */; };
+		3258A48C1EC55C270099BF2D /* libOlamiRecognizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3258A48A1EC55C270099BF2D /* libOlamiRecognizer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3258A45C1EC43A620099BF2D /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3258A4601EC43A620099BF2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3258A4621EC43A620099BF2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3258A4631EC43A620099BF2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3258A4651EC43A620099BF2D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3258A4661EC43A620099BF2D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3258A4691EC43A620099BF2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3258A46C1EC43A620099BF2D /* SmartHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHome.xcdatamodel; sourceTree = "<group>"; };
+		3258A46E1EC43A620099BF2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3258A4711EC43A620099BF2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3258A4731EC43A620099BF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3258A4791EC43A6B0099BF2D /* SmartHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartHome.entitlements; sourceTree = "<group>"; };
+		3258A47B1EC43A6B0099BF2D /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		3258A47E1EC54BFA0099BF2D /* mainBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBackground.png; sourceTree = "<group>"; };
+		3258A47F1EC54BFA0099BF2D /* mainBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainBackground@2x.png"; sourceTree = "<group>"; };
+		3258A4801EC54BFA0099BF2D /* mainBackground@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainBackground@3x.png"; sourceTree = "<group>"; };
+		3258A4871EC55AF60099BF2D /* AccessoriesDetailControllVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoriesDetailControllVC.h; sourceTree = "<group>"; };
+		3258A4881EC55AF60099BF2D /* AccessoriesDetailControllVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoriesDetailControllVC.m; sourceTree = "<group>"; };
+		3258A48A1EC55C270099BF2D /* libOlamiRecognizer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOlamiRecognizer.a; sourceTree = "<group>"; };
+		3258A48B1EC55C270099BF2D /* OlamiRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OlamiRecognizer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3258A4591EC43A620099BF2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3258A48C1EC55C270099BF2D /* libOlamiRecognizer.a in Frameworks */,
+				3258A47C1EC43A6B0099BF2D /* HomeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3258A4531EC43A620099BF2D = {
+			isa = PBXGroup;
+			children = (
+				3258A45E1EC43A620099BF2D /* SmartHome */,
+				3258A45D1EC43A620099BF2D /* Products */,
+				3258A47A1EC43A6B0099BF2D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3258A45D1EC43A620099BF2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3258A45C1EC43A620099BF2D /* SmartHome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3258A45E1EC43A620099BF2D /* SmartHome */ = {
+			isa = PBXGroup;
+			children = (
+				3258A48A1EC55C270099BF2D /* libOlamiRecognizer.a */,
+				3258A48B1EC55C270099BF2D /* OlamiRecognizer.h */,
+				3258A47D1EC54BFA0099BF2D /* resource */,
+				3258A4791EC43A6B0099BF2D /* SmartHome.entitlements */,
+				3258A4621EC43A620099BF2D /* AppDelegate.h */,
+				3258A4631EC43A620099BF2D /* AppDelegate.m */,
+				3258A4651EC43A620099BF2D /* ViewController.h */,
+				3258A4661EC43A620099BF2D /* ViewController.m */,
+				3258A4681EC43A620099BF2D /* Main.storyboard */,
+				3258A46E1EC43A620099BF2D /* Assets.xcassets */,
+				3258A4701EC43A620099BF2D /* LaunchScreen.storyboard */,
+				3258A4731EC43A620099BF2D /* Info.plist */,
+				3258A46B1EC43A620099BF2D /* SmartHome.xcdatamodeld */,
+				3258A45F1EC43A620099BF2D /* Supporting Files */,
+				3258A4871EC55AF60099BF2D /* AccessoriesDetailControllVC.h */,
+				3258A4881EC55AF60099BF2D /* AccessoriesDetailControllVC.m */,
+			);
+			path = SmartHome;
+			sourceTree = "<group>";
+		};
+		3258A45F1EC43A620099BF2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3258A4601EC43A620099BF2D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3258A47A1EC43A6B0099BF2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3258A47B1EC43A6B0099BF2D /* HomeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3258A47D1EC54BFA0099BF2D /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				3258A47E1EC54BFA0099BF2D /* mainBackground.png */,
+				3258A47F1EC54BFA0099BF2D /* mainBackground@2x.png */,
+				3258A4801EC54BFA0099BF2D /* mainBackground@3x.png */,
+			);
+			path = resource;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3258A45B1EC43A620099BF2D /* SmartHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3258A4761EC43A620099BF2D /* Build configuration list for PBXNativeTarget "SmartHome" */;
+			buildPhases = (
+				3258A4581EC43A620099BF2D /* Sources */,
+				3258A4591EC43A620099BF2D /* Frameworks */,
+				3258A45A1EC43A620099BF2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartHome;
+			productName = SmartHome;
+			productReference = 3258A45C1EC43A620099BF2D /* SmartHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3258A4541EC43A620099BF2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "VIA Technologies, Inc. & OLAMI Team";
+				TargetAttributes = {
+					3258A45B1EC43A620099BF2D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3CAWU27LX9;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3258A4571EC43A620099BF2D /* Build configuration list for PBXProject "SmartHome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3258A4531EC43A620099BF2D;
+			productRefGroup = 3258A45D1EC43A620099BF2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3258A45B1EC43A620099BF2D /* SmartHome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3258A45A1EC43A620099BF2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3258A4831EC54BFA0099BF2D /* mainBackground@3x.png in Resources */,
+				3258A4721EC43A620099BF2D /* LaunchScreen.storyboard in Resources */,
+				3258A4821EC54BFA0099BF2D /* mainBackground@2x.png in Resources */,
+				3258A46F1EC43A620099BF2D /* Assets.xcassets in Resources */,
+				3258A4811EC54BFA0099BF2D /* mainBackground.png in Resources */,
+				3258A46A1EC43A620099BF2D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3258A4581EC43A620099BF2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3258A4671EC43A620099BF2D /* ViewController.m in Sources */,
+				3258A4641EC43A620099BF2D /* AppDelegate.m in Sources */,
+				3258A46D1EC43A620099BF2D /* SmartHome.xcdatamodeld in Sources */,
+				3258A4611EC43A620099BF2D /* main.m in Sources */,
+				3258A4891EC55AF60099BF2D /* AccessoriesDetailControllVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3258A4681EC43A620099BF2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3258A4691EC43A620099BF2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3258A4701EC43A620099BF2D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3258A4711EC43A620099BF2D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3258A4741EC43A620099BF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3258A4751EC43A620099BF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3258A4771EC43A620099BF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartHome/SmartHome.entitlements;
+				DEVELOPMENT_TEAM = 3CAWU27LX9;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = SmartHome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartHome",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.olami.SmartHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3258A4781EC43A620099BF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartHome/SmartHome.entitlements;
+				DEVELOPMENT_TEAM = 3CAWU27LX9;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = SmartHome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartHome",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.olami.SmartHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3258A4571EC43A620099BF2D /* Build configuration list for PBXProject "SmartHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3258A4741EC43A620099BF2D /* Debug */,
+				3258A4751EC43A620099BF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3258A4761EC43A620099BF2D /* Build configuration list for PBXNativeTarget "SmartHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3258A4771EC43A620099BF2D /* Debug */,
+				3258A4781EC43A620099BF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3258A46B1EC43A620099BF2D /* SmartHome.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3258A46C1EC43A620099BF2D /* SmartHome.xcdatamodel */,
+			);
+			currentVersion = 3258A46C1EC43A620099BF2D /* SmartHome.xcdatamodel */;
+			path = SmartHome.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3258A4541EC43A620099BF2D /* Project object */;
+}
