@@ -42,7 +42,10 @@
         }
     }
     
-    _currentHomeLabel.text = @"当前Home：";
+    if (_currentHome) {
+        _currentHomeLabel.text = [NSString stringWithFormat:@"当前Home：%@", _currentHome.name];
+    }
+    
 }
 
 -(void)setupData {
@@ -104,7 +107,7 @@
 }
 
 - (void)updateCurrentHomeInfo {
-    _currentHomeLabel.text = [NSString stringWithFormat:@"current home：%@", _currentHome.name];
+    _currentHomeLabel.text = [NSString stringWithFormat:@"当前Home：%@", _currentHome.name];
     
     _currentHome.delegate = self;
     

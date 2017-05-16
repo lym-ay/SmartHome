@@ -32,7 +32,7 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setupData];
+    [self setupInitData];
     [self setupUI];
 }
 
@@ -41,7 +41,9 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
     // Dispose of any resources that can be recreated.
 }
 
--(void)setupData{
+-(void)setupInitData{
+    _serviceDic = [[NSMutableDictionary alloc] init];
+    
     _accessoryName.text = self.accessory.name;
     for(HMService *service in _accessory.services) {
         [_serviceDic setObject:service forKey:service.name];
@@ -171,15 +173,9 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
 #pragma mark -- 处理语音和语义的结果
 - (void)processModify:(NSString*) str {
     if ([str isEqualToString:@"open"]){//打开空调
-        dispatch_async(dispatch_get_main_queue(), ^ {
-            _asrTextView.text = @"空调已打开";
-        });
-        
         HMService *tmpService = _serviceDic[@"Switch"];
         HMCharacteristic *characteristic = tmpService.characteristics[1];
         
-        
-    
         if ([characteristic.characteristicType isEqualToString:HMCharacteristicTypeTargetLockMechanismState] ||
             [characteristic.characteristicType isEqualToString:HMCharacteristicTypePowerState] ||
             [characteristic.characteristicType isEqualToString:HMCharacteristicTypeObstructionDetected]) {
@@ -187,9 +183,14 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
             [characteristic writeValue:@YES completionHandler:^(NSError *error){
                 
                 if(error == nil) {
-                    
+                    dispatch_async(dispatch_get_main_queue(), ^ {
+                        _asrTextView.text = @"空调已打开";
+                    });
                 } else {
                     NSLog(@"error in writing characterstic: %@", error);
+                    dispatch_async(dispatch_get_main_queue(), ^ {
+                        _asrTextView.text = @"空调打开失败，请重试!";
+                    });
                 }
             }];
             
@@ -207,6 +208,49 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
             [characteristic writeValue:@NO completionHandler:^(NSError *error){
                 
                 if(error == nil) {
+                    dispatch_async(dispatch_get_main_queue(), ^ {
+                        _asrTextView.text = @"空调已关闭";
+                    });
+                } else {
+                    NSLog(@"error in writing characterstic: %@", error);
+                    _asrTextView.text = @"空调关闭失败，请重试!";
+                }
+            }];
+            
+        }
+
+        
+    }else if ([str isEqualToString:@"control_temperature"]){//调节空调的温度
+        HMService *tmpService1 = _serviceDic[@"Switch"];
+        HMCharacteristic *characteristic1 = tmpService1.characteristics[1];
+        BOOL isOpen = [characteristic1.value boolValue];
+        if (isOpen) {
+            UIAlertController *alertController = [UIAlertController
+                                                  alertControllerWithTitle:@"空调还没有打开，请打开空调"
+                                                  message:nil
+                                                  preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alertController animated:YES completion:^{
+                dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 1*NSEC_PER_SEC);
+                dispatch_after(time, dispatch_get_main_queue(), ^{
+                    [alertController dismissViewControllerAnimated:YES completion:nil];
+                    
+                });
+                
+            }];
+            
+            return;
+
+        }
+
+        
+        
+        if ([characteristic1.characteristicType isEqualToString:HMCharacteristicTypeTargetLockMechanismState] ||
+            [characteristic1.characteristicType isEqualToString:HMCharacteristicTypePowerState] ||
+            [characteristic1.characteristicType isEqualToString:HMCharacteristicTypeObstructionDetected]) {
+            
+            [characteristic1 writeValue:@YES completionHandler:^(NSError *error){
+                
+                if(error == nil) {
                     
                 } else {
                     NSLog(@"error in writing characterstic: %@", error);
@@ -216,7 +260,6 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
         }
 
         
-    }else if ([str isEqualToString:@"control_temperature"]){//调节空调的温度
         HMService *tmpService = _serviceDic[@"Temperature"];
         HMCharacteristic *characteristic = tmpService.characteristics[2];
        
