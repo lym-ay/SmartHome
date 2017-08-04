@@ -42,6 +42,14 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
 }
 
 -(void)setupInitData{
+    
+    olamiRecognizer= [[OlamiRecognizer alloc] init];
+    olamiRecognizer.delegate = self;
+    [olamiRecognizer setAuthorization:@"6b744b8419484ed6aef8bffbde738fab"
+                                  api:@"asr" appSecret:@"428a1b659f244e8ab27f81e681182bd5" cusid:OLACUSID];
+    
+    [olamiRecognizer setLocalization:LANGUAGE_SIMPLIFIED_CHINESE];//设置语系，这个必须在录音使用之前初始化
+    
     _serviceDic = [[NSMutableDictionary alloc] init];
     
     _accessoryName.text = self.accessory.name;
@@ -50,13 +58,6 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
         NSLog(@"service.name is %@",service.name);
     }
     
-    
-    olamiRecognizer= [[OlamiRecognizer alloc] init];
-    olamiRecognizer.delegate = self;
-    [olamiRecognizer setAuthorization:@"6b744b8419484ed6aef8bffbde738fab"
-                                  api:@"asr" appSecret:@"428a1b659f244e8ab27f81e681182bd5" cusid:OLACUSID];
-    
-    [olamiRecognizer setLocalization:LANGUAGE_SIMPLIFIED_CHINESE];//设置语系，这个必须在录音使用之前初始化
 }
 
 - (void)setupUI {
@@ -224,7 +225,7 @@ OlamiRecognizerDelegate,UITextViewDelegate> {
         HMService *tmpService1 = _serviceDic[@"Switch"];
         HMCharacteristic *characteristic1 = tmpService1.characteristics[1];
         BOOL isOpen = [characteristic1.value boolValue];
-        if (isOpen) {
+        if (!isOpen) {
             UIAlertController *alertController = [UIAlertController
                                                   alertControllerWithTitle:@"空调还没有打开，请打开空调"
                                                   message:nil

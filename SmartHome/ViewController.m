@@ -77,9 +77,29 @@
     __weak ViewController *weakSelf = self;
     UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSString *newName = inputNameAlter.textFields.firstObject.text;
-        [weakSelf.homeManager addHomeWithName:newName completionHandler:^(HMHome * _Nullable home, NSError * _Nullable error) {
+        NSMutableArray *homesName = [[NSMutableArray alloc] init];
+        for (HMHome *home in weakSelf.homeManager.homes) {
+            [homesName addObject:home.name];
+        }
+        
+        if ([homesName containsObject:newName]) {
+            UIAlertController *alter = [UIAlertController alertControllerWithTitle:@"这个名字已经存在" message:@"请确保这个名字的唯一性" preferredStyle:UIAlertControllerStyleAlert];
             
-        }];
+             [self presentViewController:alter animated:YES completion: ^{
+                 dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 1*NSEC_PER_SEC);
+                 dispatch_after(time, dispatch_get_main_queue(), ^{
+                     [alter dismissViewControllerAnimated:YES completion:nil];
+                     
+                 });
+             }];
+            
+            return;
+        }else{
+            [weakSelf.homeManager addHomeWithName:newName completionHandler:^(HMHome * _Nullable home, NSError * _Nullable error) {
+                
+            }];
+        }
+        
     }];
     [inputNameAlter addAction:action1];
     [inputNameAlter addAction:action2];
